@@ -20,4 +20,6 @@ var fibonacci1 = fibonacci2;
 var fibonacci2=fibonacciCurrent;
 }
 
-console.log("\n"+ fibonacci2.toLocaleString("en")+".\n")
+console.log("\n"+ fibonacci2.toLocaleString("en")+".")
+
+//done

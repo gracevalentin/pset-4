@@ -20,4 +20,5 @@ let NinthToLastInteger = (PositiveInteger).last().prev(-9);
 let TenthToLastInteger = (PositiveInteger).last().prev(-10);
 
 console.log("")
-//NOT DONE
+
+//needs to reply with all the numbers backwards, seperated by commas
