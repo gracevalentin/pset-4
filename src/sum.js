@@ -1,9 +1,26 @@
 const readlineSync = require("readline-sync");
 
-const MIN = Number.MIN_SAFE_INTEGER;
+const MIN = 1;
 const MAX = Number.MAX_SAFE_INTEGER;
 
-let LowerBound = Number(readlineSync.question("\nLower Bound: "));
-let UpperBound = Number(readlineSync.question("\nUpper Bound: "));
+let LowerBound = Number(readlineSync.question("\nLower bound: "));
+let UpperBound = Number(readlineSync.question("Upper bound: "));
 
-//needs to add all even numbers between upper and lower bound; if the lower bound is larger than the upper bound it has to ask again until it gets a valid input
+let Sum = 0
+
+while (LowerBound > UpperBound) {
+    LowerBound = readlineSync.question("Lower bound: ")
+    UpperBound = readlineSync.question("Upper bound: ")
+}
+if (LowerBound % 2 == 0) {
+    for (let i = LowerBound; i <= UpperBound; i += 2); {
+      Sum = i + Sum
+    }
+console.log("\n" + Sum.toLocaleString("en") + ".\n")
+} else {
+    for( let i = LowerBound + 1; i <= UpperBound; i += 2) {
+      Sum = i + Sum;
+    }
+} console.log("\n" + Sum.toLocaleString("en") + ".\n")
+
+//done

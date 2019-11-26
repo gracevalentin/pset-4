@@ -5,6 +5,6 @@ const MAX = Number.MAX_SAFE_INTEGER;
 
 do {
   let NonNegativeInteger = Number(readlineSync.question("\nNon-negative integer: "));
-} while (amount > MIN || amount < MAX  && //negative??)
+} while (amount > MIN && amount < MAX )
 
 //NOT DONE
