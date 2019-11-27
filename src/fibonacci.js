@@ -21,5 +21,3 @@ var fibonacci2=fibonacciCurrent;
 }
 
 console.log("\n"+ fibonacci2.toLocaleString("en")+".")
-
-//done

@@ -1,15 +1,26 @@
 const readlineSync = require("readline-sync");
 
-const MIN = 0;
-const MAX = Number.MAX_SAFE_INTEGER;
-let NonNegativeInteger = -1
-console.log ()
-while (NonNegativeInteger < MIN || NonNegativeInteger > MAX) {
-  let NonNegativeInteger = Number(readlineSync.question("Non-negative integer: "));
+console.log()
+
+const MIN = 0
+const MAX = Number.MAX_SAFE_INTEGER
+
+NonNegativeInteger = -1
+check = 0
+
+while (NonNegativeInteger < 0 || NonNegativeInteger > Number.MAX_SAFE_INTEGER) {
+      NonNegativeInteger = Number(readlineSync.question("Non-negative integer: "));
 }
 
-if (NonNegativeInteger % 1==0 || NonNegativeInteger % NonNegativeInteger==0){
-  console.log("\nPrime.\n")
-} else (NonNegativeInteger % 1==!0 || NonNegativeInteger % NonNegativeInteger==!0);{
-  console.log("\nNot prime.\n")
+for (i = 2; i <= Math.sqrt(NonNegativeInteger); i++) {
+  if ((NonNegativeInteger / i % 1 == 0 && check == 0)) {
+    console.log("\nNot Prime.\n")
+    ++check
+  }
 }
+
+if (check == 0) {
+  console.log("\nPrime.\n")
+}
+
+//done
